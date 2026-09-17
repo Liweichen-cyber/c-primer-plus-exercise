@@ -1,0 +1,11 @@
+# macOS 系统文件
+.DS_Store
+
+# CLion 构建目录（每个配置一个，用通配符全忽略）
+cmake-build-*/
+
+# CLion IDE 个人配置
+.idea/
+
+# 备份文件（CLion 生成的 .bak 系列）
+*.bak*
