@@ -5,7 +5,7 @@ int main(void) {
 
     for (row = 0 ;row <= 5 ; row ++) {
         for (ch = 'F' ; ch >= 'F'-row ; ch --) {
-            printf("row=%d ch=%c\n", row, ch);
+            printf("%c", ch);
         }
         printf("\n") ;
     }
