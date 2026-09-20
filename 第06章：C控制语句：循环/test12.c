@@ -2,7 +2,7 @@
 int main (void) {
 
     int number , i ;
-    double sum  ;
+    double sum  ;  //不能用int sum
     printf("Please input a number to sum up :");
     scanf ("%d" , &number);
 
@@ -11,7 +11,7 @@ int main (void) {
         for (i = 1 ; i <= number ; i ++) {
             sum = sum + 1.0 /i ;     // 1.0 使除法变为浮点除法；1 / i 是整数除法，小数部分会被舍弃
         }
-        printf("%f\n" , sum);
+        printf("Sequence 1 :%f\n" , sum);
         printf("Please input another number to sum up:");
         scanf ("%d" , &number) ;
         }
