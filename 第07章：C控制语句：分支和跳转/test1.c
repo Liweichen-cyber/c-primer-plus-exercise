@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main(void) {
 
-    //char ch ;   whiile 里面有ch = getchar了，这里就不用再写了
+    char ch ;
     printf ("Please enter a paragraph of text :") ;
-    ch = getchar() ;
+    //ch = getchar() ;   whiile 里面有ch = getchar了，这里就不用再写了
     int space = 0 ;
     int newlines = 0 ;
     int others = 0 ;
