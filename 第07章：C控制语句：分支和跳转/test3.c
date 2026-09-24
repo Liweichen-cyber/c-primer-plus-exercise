@@ -20,8 +20,36 @@ int main (void) {
         scanf("%d" , &number);
 
     }
-    printf("You have input %d odd numbers , the averange of them is %d\n" , odd_count , odd_sum / odd_count) ;
-    printf("You have input %d even numbers , the averange of them is %d" , even_count , even_sum / even_count);
+    if (odd_count == 0) {
+        printf("You have input 0 odd numbers, the average of them is 0\n");
+
+        double even_average = (double)even_sum / even_count;
+        printf("You have input %d even numbers, the average of them is %f\n",
+               even_count, even_average);
+    }
+    else if (even_count == 0) {
+        double odd_average = (double)odd_sum / odd_count;
+
+        printf("You have input %d odd numbers, the average of them is %f\n",
+               odd_count, odd_average);
+
+        printf("You have input 0 even numbers, the average of them is 0\n");
+    }
+    else {
+        double odd_average = (double)odd_sum / odd_count;
+        double even_average = (double)even_sum / even_count;
+
+        printf("You have input %d odd numbers, the average of them is %f\n",
+               odd_count, odd_average);
+
+        printf("You have input %d even numbers, the average of them is %f\n",
+               even_count, even_average);
+    }
 
     return 0;
 }
+
+//第一，注意如果没有输入奇数或者偶数会出现除以0的情况
+//第二，如果结果为小数，需要double类型，因此平均值需要再定义一个double类型
+//第三，平均值的计算要放在判断 count 是否为 0 之后，避免在 count 为 0 时进行除法
+//第四，（double）a/b属于强制转换的表达方式
