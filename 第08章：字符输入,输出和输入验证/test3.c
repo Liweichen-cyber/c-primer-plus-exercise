@@ -7,7 +7,7 @@ int main(void) {
     int lowercase = 0 ;
     printf("Please enter some characters:") ;
 
-    while ((ch = getchar()) != '\n') {
+    while ((ch = getchar()) != EOF) {
         if (isupper(ch)) {          //判断是不是大写字母
             capital_letter ++ ;
         }
