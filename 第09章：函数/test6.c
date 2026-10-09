@@ -11,32 +11,23 @@ int main(void) {
 }
 
 void exchange (double *a , double *b , double *c) {
-    double temp1 = *a ;
-    double temp2 = *b ;
-    if (*a > *b && *b > *c) {
-        *a = *c ;
-        *c = temp1 ;
+    double temp ;
+    if (*a >= *b) {
+        temp = *b ;
+        *b = *a ;
+        *a = temp ;
     }
 
-    else if (*a > *c && *c > *b) {
-        *a = *b ;
+    if (*a >= *c) {
+        temp = *c ;
+        *c = *a ;
+        *a = temp ;
+    }
+
+    if (*b >= *c) {
+        temp = *b ;
         *b = *c ;
-        *c = temp1 ;
+        *c = temp ;
     }
 
-    else if (*b > *a && *a > *c) {
-        *a = *c ;
-        *b = temp1 ;
-        *c = temp2 ;
-    }
-
-    else if (*b > *c && *c > *a) {
-        *b = *c ;
-        *c = temp2 ;
-    }
-
-    else if (*c > *a && *a > *b) {
-        *a = *b ;
-        *b = temp1 ;
-    }
 }
