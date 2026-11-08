@@ -5,6 +5,7 @@ int main(void) {
     printf("Input the first character string:");
     char character1[100];
 
+    //使用 fgets() 读取一行字符串，如果读取失败，就结束程序。
     if (fgets(character1, 100, stdin) == NULL)
         return 1;
 
